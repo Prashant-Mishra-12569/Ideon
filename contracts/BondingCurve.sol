@@ -21,7 +21,9 @@ contract BondingCurve {
     uint256 public constant VIRTUAL_ETH   = 1.6 ether;
     uint256 public constant VIRTUAL_TOKEN = 800_000_000 ether; // 800M * 1e18
     uint256 public constant REAL_TOKEN    = 800_000_000 ether; // total supply
-    uint256 public constant MIGRATION_THRESHOLD = 16 ether;
+    // TESTNET: 0.001 ETH threshold for easy testing on Base Sepolia
+    // Production: Change to 16 ether for mainnet
+    uint256 public constant MIGRATION_THRESHOLD = 0.001 ether; // 1000x smaller for testnet
     uint256 public constant FEE_BPS = 100;       // 1%
     uint256 public constant BPS = 10_000;
 
